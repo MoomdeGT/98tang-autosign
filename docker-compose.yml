@@ -1,0 +1,15 @@
+services:
+  autosign:
+    build: .
+    image: 98tang-autosign:latest
+    container_name: 98tang-autosign
+    volumes:
+      - ./config.env:/app/config.env
+      - ./logs:/app/logs
+    environment:
+      - TZ=Asia/Shanghai
+    #deploy:
+      #resources:
+        #limits:
+          #memory: 2G
+    network_mode: bridge
