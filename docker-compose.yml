@@ -4,8 +4,8 @@ services:
     image: 98tang-autosign:latest
     container_name: 98tang-autosign
     volumes:
-      - ./config.env:/app/config.env
-      - ./logs:/app/logs
+      - ./data/config.env:/app/config.env
+      - ./data/logs:/app/logs
     environment:
       - TZ=Asia/Shanghai
     #deploy:
